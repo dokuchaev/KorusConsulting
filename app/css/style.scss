@@ -1,0 +1,64 @@
+/*main styles*/
+@import '_variables.scss';
+@import './node_modules/normalize.css/normalize.scss';
+@import 'progressbar.scss';
+@import 'pie.scss';
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+
+
+body{
+font-family: 'Roboto', sans-serif;
+font-size: 14px;
+}
+
+.container {
+    width: 980px;
+    min-width: 980px;
+    max-width: 100%;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.row {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.h2{
+    font-weight: normal;
+    margin-top: 0;
+}
+
+.title--color-warn{
+color: $step-warn;
+}
+
+.title--color-atten{
+  color: #ff961f;
+}
+
+.text--upper{
+  text-transform: uppercase;
+}
+
+.pl--large{
+    padding-left: 90px;
+}
+
+.pr--large{
+    padding-right: 90px;
+}
+
+.mt--3{
+margin-top: 3em;
+}
+

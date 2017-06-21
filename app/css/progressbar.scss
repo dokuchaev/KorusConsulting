@@ -1,0 +1,214 @@
+
+/*progressbar styles*/
+@import '_variables.scss';
+.progress-bar{
+    background: #ccc;
+    width: 100%;
+    height: 10px;
+    margin-top: 50px;
+}
+
+
+.progress {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  color: darken($mute, 33%);
+
+  > li {
+    position: relative;
+    display: table-cell;
+    text-align: center;
+    font-size: 0.8em;
+    
+    &:before {
+    content: '';
+    display: block;
+    margin: 0 auto;
+    background: #fff;
+    width: 15px;
+    height: 15px;
+    border: 2px solid #DFE3E4;
+    top: 1px;
+    text-align: center;
+    margin-top: 14px;
+    margin-bottom: 1.25em;
+    line-height: 3em;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+    position: relative;
+    z-index: 1000;
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 0.5em;
+      top: 1.25em;
+      left: 50%;
+      margin-left: 1.5em\9;
+      z-index: -1;
+      background: url(../images/arrow.png);
+    background-size: contain;
+    }
+    &:last-child:after {
+      display: none;
+    }
+    &.is-complete {
+      color: $complete;
+   .progress__step__text{
+    color: $complete;
+    }
+      &:before,
+      &:after {
+        color: #FFF;
+        background: $complete;
+      }
+     &:first-child:before{
+         content: none;
+     }
+       + li:before{
+        color: $complete;
+        background: $active;
+        border: 2px solid $active;
+        box-shadow: inset 0px 0px 0px 2px #fff;
+       }
+          &:nth-child(4)
+        {
+            &:after{
+              background: $step-warn;  
+            }
+           + li:before{
+             color: $step-warn; 
+             background: $step-warn; 
+             border: 2px solid $step-warn; 
+             box-shadow: inset 0px 0px 0px 2px #fff;
+        }
+       .progress__step__text{
+    color: $step-warn;
+    }
+        }
+       &:nth-child(5)
+        {
+            &:after{
+              background: $step-warn;  
+            }
+           + li:before{
+             color: $step-warn; 
+      background: $step-warn; 
+    border: 2px solid $step-warn; 
+    box-shadow: inset 0px 0px 0px 2px #fff;
+        }
+    .progress__step__text{
+    color: $step-warn;
+    }
+        }
+    }
+
+    &.is-progress{
+     .progress__step__text{
+    color: $complete;
+    }
+        &:after{
+        background: url(../images/arrow-step-1.png);
+        background-size: contain;
+        }
+        + li:before{
+         color: #FFF;
+         background: #fff;  
+         border: 2px solid $active;
+        }
+        &:nth-child(3)
+        {
+            &:after{
+            background: url(../images/arrow-step-3.png);
+            background-size: contain;
+            }
+           + li:before{
+         color: #FFF;
+         background: #fff;  
+         border: 2px solid $step-atten;
+        }
+        .progress__step__text{
+        color: $step-atten;
+    }
+        }
+
+         &:nth-child(4)
+        {
+         &:after{
+         background: url(../images/arrow-step-last.png);
+         background-size: contain;
+            }
+           + li:before{
+         color: #FFF;
+         background: #fff;  
+         border: 2px solid $step-warn;
+        }
+            .progress__step__text{
+    color: $step-warn;
+    }
+        }
+      &:nth-child(5)
+        {
+            &:after{
+            background: url(../images/arrow-step-last.png);
+            background-size: contain;
+            }
+           + li:before{
+           color: #FFF;
+           background: #fff;  
+           border: 2px solid $step-warn;
+        }
+     .progress__step__text{
+      color: $step-warn;
+    }
+        }
+
+    }
+    &.is-active {
+         color: #FFF;
+
+      
+      &:before {
+      color: $complete;
+      background: $active;
+      border: 2px solid $active;
+      box-shadow: inset 0px 0px 0px 2px #fff;
+ 
+      }
+    }
+  }
+}
+
+  .progress__last:after {
+    display: none!important;
+  }
+
+  .progress--medium {
+    font-size: 1.5em;
+  }
+  .progress--large {
+    font-size: 2em;
+  }
+
+.progress__step__text{
+    position: absolute;
+    color: $mute;
+    width: 100%;
+    font-size:0.625em;
+}
+
+.progress__step__text--bottom{
+    bottom: 7px;
+}
+
+.progress__step__text--top{
+    top: 4px;
+    color: $mute-text!important;
+}

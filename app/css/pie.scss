@@ -1,0 +1,106 @@
+@import '_variables.scss';
+.pie{
+
+    display: flex;
+        flex-flow: row wrap;
+    float: left;
+}
+.pie__item:nth-child(3),
+.pie__item:nth-child(4){
+    padding-top: 50px;
+}
+
+.pie__chart{
+    width: 160px;
+    float: left;
+}.square {
+    width: 60px;
+    height: 60px;
+    margin: 1px;
+    position: absolute;
+}
+.pie__item{
+    flex-basis: 50%;
+     position: relative;
+}
+.pie__item:nth-child(odd){
+     min-height: 140px;
+}
+.pie__chart_section{
+
+    height: 70px;
+    width: 70px;
+
+}
+.square--top-right{
+     border-top-right-radius: 100%;
+    bottom: 0;
+    left: 0;
+}
+ .square--top-left{
+     border-top-left-radius: 100%;
+     bottom: 0;
+    right: 0;
+}
+ .square--bottom-left{
+     border-bottom-left-radius: 100%;
+         top: 0;
+    right: 0;
+}
+
+ .square--bottom-right{
+    border-bottom-right-radius: 100%;
+    top: 0;
+    left: 0;
+}
+
+.square--color-1,
+.pie__progress--item-color-1{
+    background: $active;
+}
+
+.square--color-2,
+.pie__progress--item-color-2 {
+    background: $step-warn;
+}
+
+.square--color-3,
+.pie__progress--item-color-3 {
+  	background: $step-atten;
+}
+
+.square--color-4,
+.pie__progress--item-color-4 {
+	background: $active;
+}
+
+.square--scale-max{
+    height: 75px;
+    width: 75px;
+}
+
+.square--scale-min{
+    height: 65px;
+    width: 65px;
+}
+
+.pie__progress{
+    width: 50%;
+}
+
+.pie__progress--item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 14px;
+    text-align: center;
+}
+
+.pie__progress--item-text{
+    font-size: 10px;
+    color:#fff;
+}
+
+.pie__progress--marg{
+    margin-top: 50px;
+}

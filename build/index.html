@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>КОРУС Консалтинг</title>
+    <!--stylesheet-->
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <!--Progress bar block-->
+        <div class="row mt--3">
+            <ol class="progress progress--medium">
+                <li class="is-complete" data-step="1">
+                </li>
+                <li data-step="2" class="is-active is-progress">
+                    <span class="progress__step__text progress__step__text--bottom">В процессе</span>
+                </li>
+                <li data-step="3"></li>
+                <li data-step="4"></li>
+                <li data-step="5"></li>
+                <li data-step="6" class="progress__last"></li>
+            </ol>
+
+            <ol class="progress progress--medium">
+                <li class="is-complete" data-step="1">
+                </li>
+                <li data-step="2" class="is-active is-complete">
+                </li>
+                <li data-step="3" class="is-active is-progress">
+                    <span class="progress__step__text progress__step__text--top">Действия возможны</span>
+                    <span class="progress__step__text progress__step__text--bottom">Что-то пошло не так</span>
+                </li>
+                <li data-step="4">
+                </li>
+                <li data-step="5">
+                </li>
+                <li data-step="6" class="progress__last">
+                </li>
+            </ol>
+
+            <ol class="progress progress--medium">
+                <li class="is-complete" data-step="1">
+                </li>
+                <li data-step="2" class="is-active is-complete">
+                </li>
+                <li data-step="3" class="is-complete is-active ">
+                </li>
+                <li data-step="4" class="is-complete is-active">
+                    <span class="progress__step__text progress__step__text--top">Все пропало</span>
+                    <span class="progress__step__text progress__step__text--bottom">Конец игры</span>
+                </li>
+                <li data-step="5" class="">
+                </li>
+                <li data-step="6" class="progress__last">
+                </li>
+            </ol>
+        </div>
+
+
+        <!--PIE chart block-->
+        <div class="row mt--3">
+            <div class="pie mt--3">
+                    <div class="pie__item">
+                        <h2 class="h2 text--upper pr--large">Организационно-правовые риски</h2>
+                        <div class="pie__item__text pr--large">
+                            Статус компании, массовые адреса, руководители и учредители, время существования организации
+                        </div>
+                        <div class="pie__chart_section">
+                            <div class="square square--top-left square--color-1"></div>
+                        </div>
+                    </div>
+                    <div class="pie__item">
+                          <h2 class="h2 text--upper title--color-warn pl--large">Финансы</h2>
+                        <div class="pie__item__text pl--large">
+                            Непокрытые убытки, основные средства, выручка, убыток, уставный капитал, кредиторская и дебиторская задолженности
+                        </div>
+                        <div class="pie__chart_section">
+                            <div class="square square--top-right square--scale-max square--color-2"></div>
+                        </div>
+                    </div>
+            
+
+            
+                    <div class="pie__item">
+                         <h2 class="h2 text--upper  pr--large">Госконтракты</h2>
+                        <div class="pie__item__text  pr--large">
+                            Выигранные, отмененные и исполнительные госконтракты
+                        </div>
+                         <div class="pie__chart_section">
+                            <div class="square square--bottom-left square--color-1"></div>
+                        </div>
+                    </div>
+                    <div class="pie__item">
+                        <h2 class="h2 text--upper title--color-atten pl--large">Деловые риски</h2>
+                        <div class="pie__item__text pl--large">
+                            Сообщения о банкротстве, арбитражные дела, реестр недобросовестных поставщиков
+                        </div>
+                         <div class="pie__chart_section">
+                            <div class="square square--bottom-right square--scale-min square--color-3"></div>
+                        </div>
+                    </div>
+                
+            </div>
+        </div>
+
+        <!--Inline chart block-->
+        <div class="row mt--3">
+            <div class="pie__progress mt--3">
+                <div class="pie__progress--item pie__progress--item-color-1"><span class="pie__progress--item-text">32%</span></div>
+                <div class="pie__progress--item pie__progress--item-color-3"><span class="pie__progress--item-text">67%</span></div>
+                <div class="pie__progress--item pie__progress--item-color-2"><span class="pie__progress--item-text">93%</span></div>
+            </div>
+        </div>
+    </div>
+</body>
+<!--scripts-->
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+    crossorigin="anonymous"></script>
+<script src="js/main.min.js"></script>
+</html>
